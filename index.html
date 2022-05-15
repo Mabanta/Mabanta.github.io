@@ -14591,7 +14591,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E2%80%9CPop%E2%80%9D-music-vs-%E2%80%9CPopular%E2%80%9D-music?">&#8220;Pop&#8221; music vs &#8220;Popular&#8221; music?<a class="anchor-link" href="#%E2%80%9CPop%E2%80%9D-music-vs-%E2%80%9CPopular%E2%80%9D-music?">&#182;</a></h2><p>When people use the term “<em>pop music</em>” they could be referring either to popular music (as in music that is popular or trending) or a more specific genre distinct from metal, jazz, rap, indie, and other established genres. The discussion as to what constitutes the genre of pop music is a complicated one as the genre continuously evolves–branching out and <a href="https://en.wikipedia.org/wiki/Pop_music">borrowing musical elements from other styles like rock, dance, Latin, and country music</a>. The genre of pop also typically aligns with what is currently popular at a given time and Wikipedia suggests <em>“that the term "pop music" may be used to describe a distinct genre, designed to appeal to all.”</em> Yet when examining the top hits from the last two decades, there are some tracks that probably wouldn’t be considered as emblematic of the “pop” genre, but rather a subgenre or a different style altogether.</p>
-<p>The discussion of popular music is also complex as what makes for “good” music relies heavily on cultural influences at the time. The #1 hit song in the United States in 2005 might not be the same as what’s popular in Spain or South Korea. To clarify, for this project we are analyzing <strong>popular music in the United States from January 1st, 2000 to today</strong> (March 16th, 2022) with the intent of determining if certain combinations of musical qualities are more likely to create hit songs than others. While the process of creating music isn't necessarily so straightforward, information about what the most popular song duration, tempo, key signature, or even volume could provide a guideline for people who wish to create well recieved music.</p>
+<p>The discussion of popular music is also complex as the current notion of <em>“good”</em> music relies heavily on subjective opinions influenced by our culture today. The types of songs that are popular in the United States in 2022 differs from the hit songs of 2005 and might not even be the same as what is currently trending in other countires like Spain or South Korea. Because of this I want to make it clear that the goal of this project is <strong>not to define what</strong> <strong><em>"good"</em></strong> <strong>music is</strong> but merely to examine trends in the most frequently played tracks.</p>
+<p>To clarify, for this project rather than analyzing music from a particular genre, I am analyzing <strong>popular music in the United States from January 1st, 2000 to today</strong> (March 16th, 2022) with the intent of determining if certain combinations of musical qualities are more likely to create hit songs than others. While the process of creating music isn't necessarily so straightforward, information about what the most popular song duration, tempo, key signature, or even volume could provide a guideline for people who wish to create their own popular music.</p>
 
 </div>
 </div>
@@ -14603,9 +14604,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Explanation of Motivation &amp; Provide Resources</p>
-<p>Motivation: each tutorial should be sufficiently motivated. If there is not motivation for the analysis, why would we ‘do data science’ on this topic?</p>
-<p>Resources: tutorials should help the reader learn a skill, but they should also provide a launching pad for the reader to further develop that skill. The tutorial should link to additional resources wherever appropriate, so that a well-motivated reader can read further on techniques that have been used in the tutorial.</p>
+<h5 id="Brief-Disclaimer"><em>Brief Disclaimer</em><a class="anchor-link" href="#Brief-Disclaimer">&#182;</a></h5><p>At the time of writing this I have very limited experience with music theory. I have taken one course in music theory that covered the fundamentals and I play the guitar as a hobby. As my knowledge of music theory grows, I intend on expanding the scope of this project to analyze the more complex elements of music composition to provide more interesting data on recent trends.</p>
 
 </div>
 </div>
@@ -14617,7 +14616,47 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Collecting-Billboard-Top-100-Data">Collecting Billboard Top 100 Data<a class="anchor-link" href="#Collecting-Billboard-Top-100-Data">&#182;</a></h1>
+<h2 id="Billboard-Hot-100">Billboard Hot 100<a class="anchor-link" href="#Billboard-Hot-100">&#182;</a></h2><p>To determine which songs are the most popular, I chose to use <a href="https://www.billboard.com/charts/">Billboard charts</a>. I wanted data on the most popular songs within the United States and for how long they have been popular without relying on a specific streaming service. While music streaming services keep track of how often a song is played, managing to collect the total number of times a given track has been played on different services would be an incredibly time consuming task. When searching for an alternative, I found <a href="https://www.billboard.com/">Billboard Magazine</a> which focuses its brand on constructing charts and reporting on music news and trends across different genres of music. The Billboard Hot 100 acts as a <a href="https://en.wikipedia.org/wiki/Billboard_Hot_100">music industry standard record chart</a> and provides information taking into considering all of the most common ways to consume music today. The tooltip on the Hot 100 Charts says the following:</p>
+<blockquote><p>The week’s most popular songs, ranked by audio and video streaming activity on leading digital music services, radio airplay audience impressions based on monitored airplay and sales data, all compiled by Luminate. Audience totals are derived, in part, using certain Nielsen Audio listener estimates.”</p>
+</blockquote>
+<p>They also provide a variety of charts such as the Billboard Global 200, Billboard Global Excluding US, Hot Country Songs, Top Latin Albums, and more.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Spotify-Web-Api">Spotify Web Api<a class="anchor-link" href="#Spotify-Web-Api">&#182;</a></h2><p>After using the Billboard Hot 100 charts to obtain a list of popular songs, I looked for other websites to scrape relevant song data from. After spending some time looking, I ended up deciding to use <a href="https://developer.spotify.com/">Spotify's Web API</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">&#182;</a></h2><p>Now with all of the basic information covered, we can now go ahead with obtaining the data.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Collecting-Billboard-Top-100-Data">Collecting Billboard Top 100 Data<a class="anchor-link" href="#Collecting-Billboard-Top-100-Data">&#182;</a></h3><p>To begin, we first want to scrape the information from the Billboard Hot 100 pages. We're looking to obtain the ranking of each song, the song titles, the artist names, and the number of weeks the song has been in the Hot 100.</p>
+
 </div>
 </div>
 </div>
@@ -14629,96 +14668,74 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import Libraries</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries for data collection</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">rq</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="k">as</span> <span class="n">bs</span>
 <span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="kn">import</span> <span class="nn">re</span>
 
-<span class="c1"># Helper Functions</span>
+<span class="c1"># Returns a formatted string from a datetime to use when scraping Billboard charts</span>
 <span class="k">def</span> <span class="nf">format_datetime</span><span class="p">(</span><span class="n">datetime</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">month</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">day</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> 
 
+<span class="c1"># Returns a formatted string given a string containing artist name(s)</span>
 <span class="k">def</span> <span class="nf">format_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="c1"># Fixes the formatting of the ampersand</span>
     <span class="n">amp</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;&amp;amp;&#39;</span><span class="p">,</span> <span class="s2">&quot;&amp;&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="c1"># Standardizes ways of featuring an artist to &quot;ft.&quot;</span>
     <span class="n">ft</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;(Featuring)|(featuring)|(feat\.?)&#39;</span><span class="p">,</span> <span class="s2">&quot;ft.&quot;</span><span class="p">,</span> <span class="n">amp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ft</span>
 
+<span class="c1"># Removes html tags from a string</span>
 <span class="k">def</span> <span class="nf">remove_tags</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
     <span class="n">tag1</span> <span class="o">=</span><span class="s1">&#39;&lt;&#39;</span> <span class="o">+</span> <span class="n">tag</span> <span class="o">+</span> <span class="s1">&#39;.*?&gt;\s*&#39;</span>
     <span class="n">tag2</span> <span class="o">=</span> <span class="s1">&#39;\s*&lt;/&#39;</span> <span class="o">+</span> <span class="n">tag</span> <span class="o">+</span> <span class="s1">&#39;.*?&gt;&#39;</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">tag2</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">tag1</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">))</span>
 
+<span class="c1"># Scrapes data from a specified billboard page in a given period of time</span>
 <span class="k">def</span> <span class="nf">scrape_billboard</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
     <span class="n">info_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">date</span> <span class="o">=</span> <span class="n">start_date</span>
+    <span class="c1"># Continues to scrape from new pages until the end date is reached</span>
     <span class="k">while</span> <span class="n">date</span> <span class="o">&lt;=</span> <span class="n">end_date</span><span class="p">:</span>
+        <span class="c1"># Access the proper url given the date</span>
         <span class="n">billboard_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.billboard.com/&quot;</span>  <span class="o">+</span> <span class="n">page</span> <span class="o">+</span> <span class="n">format_datetime</span><span class="p">(</span><span class="n">date</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
         <span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">rq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">billboard_url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+        <span class="c1"># Look for individual song entries</span>
         <span class="n">charts</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;o-chart-results-list-row-container&#39;</span><span class="p">))</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">charts</span><span class="p">:</span>
+            <span class="c1"># Scrape the data from the chart</span>
             <span class="n">rank</span> <span class="o">=</span> <span class="n">remove_tags</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;c-label a-font-primary-bold-l&#39;</span><span class="p">))))</span>
             <span class="n">title</span> <span class="o">=</span> <span class="n">remove_tags</span><span class="p">(</span><span class="s2">&quot;h3&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h3&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;c-title&#39;</span><span class="p">))))</span>
             <span class="n">artist</span> <span class="o">=</span> <span class="n">remove_tags</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;c-label a-no-trucate&#39;</span><span class="p">))))</span>
-            <span class="c1"># Handle Multiple Artists</span>
+            <span class="c1"># Properly format the title and artist for ease of use later</span>
             <span class="n">title</span> <span class="o">=</span> <span class="n">format_name</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
             <span class="n">artist</span> <span class="o">=</span> <span class="n">format_name</span><span class="p">(</span><span class="n">artist</span><span class="p">)</span>
+            <span class="c1"># Find Last_Week, Peak_Pos, and Wks_on_Chart info</span>
             <span class="n">search</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(c-label a-font-primary-m lrv-u-padding-tb-050@mobile-max)|(c-label a-font-primary-bold-l a-font-primary-m@mobile-max u-font-weight-normal@mobile-max)&#39;</span><span class="p">))</span>
             <span class="s2">&quot;c-label a-font-primary-bold-l a-font-primary-m@mobile-max u-font-weight-normal@mobile-max&quot;</span>
+            <span class="c1"># Grab the data on the weeks on the chart</span>
             <span class="n">weeks</span> <span class="o">=</span> <span class="n">remove_tags</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">search</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+            <span class="c1"># Add the data to the info_list</span>
             <span class="n">page_name</span> <span class="o">=</span> <span class="s2">&quot;Weeks_in_&quot;</span> <span class="o">+</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;charts/|/&#39;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
             <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Rank&#39;</span><span class="p">:</span> <span class="n">rank</span><span class="p">,</span> <span class="s1">&#39;Title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;Artist&#39;</span><span class="p">:</span> <span class="n">artist</span><span class="p">,</span> <span class="s1">&#39;Week&#39;</span><span class="p">:</span> <span class="n">date</span><span class="p">,</span> <span class="n">page_name</span><span class="p">:</span> <span class="n">weeks</span><span class="p">}</span>
             <span class="n">info_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="c1"># Increment the date by a week (Billboard&#39;s charts are on a weekly basis)</span>
         <span class="n">date</span> <span class="o">+=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="c1"># Return a dataframe from the info_list</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">info_list</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">scrape_azlyrics</span><span class="p">():</span>
-    <span class="k">return</span> <span class="mi">1</span>
-
-<span class="k">def</span> <span class="nf">scrape_hooktheory</span><span class="p">():</span>
-    <span class="c1"># Get Chord and Melody Metrics as defined by Hook Theory</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.hooktheory.com/theorytab/view/mariah-carey/all-i-want-for-christmas-is-you&quot;</span>
-    <span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">rq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">)</span>
-    <span class="k">return</span> <span class="mi">1</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">billboard_data</span> <span class="o">=</span> <span class="n">scrape_billboard</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">(),</span> <span class="s2">&quot;charts/hot-100/&quot;</span><span class="p">)</span>
+<span class="c1"># Scrape hot-100 data from 01-01-2000 to today</span>
+<span class="n">billboard_data</span> <span class="o">=</span> <span class="n">scrape_billboard</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">(),</span> <span class="s2">&quot;charts/hot-100/&quot;</span><span class="p">)</span>
+<span class="c1"># Track the first and last week a track enters the hot-100 charts instead of each week that the data is in the hot-100</span>
 <span class="n">billboard_data</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;First_Week&quot;</span><span class="p">,</span> <span class="n">billboard_data</span><span class="p">[</span><span class="s1">&#39;Week&#39;</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">billboard_data</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Last_Week&quot;</span><span class="p">,</span> <span class="n">billboard_data</span><span class="p">[</span><span class="s1">&#39;Week&#39;</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">billboard_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Week&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Export to a csv to save time in subsequent calls</span>
 <span class="n">billboard_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;csv/billboard_data.csv&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">billboard_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;csv/billboard_data.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span>
+<span class="c1"># Drop the extra row added when converting to csv</span>
+<span class="n">billboard_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;csv/billboard_data.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span>
 <span class="n">billboard_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
@@ -14727,149 +14744,33 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Explanation of scraping billboard data:
+Why Hot-100 instead of another chart?
+Why use First/Last Week markers?
+Why format the names?
+Why 2000?</p>
 
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Rank</th>
-      <th>Title</th>
-      <th>Artist</th>
-      <th>Weeks_in_hot-100</th>
-      <th>First_Week</th>
-      <th>Last_Week</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Smooth</td>
-      <td>Santana ft. Rob Thomas</td>
-      <td>23</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Back At One</td>
-      <td>Brian McKnight</td>
-      <td>19</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>I Wanna Love You Forever</td>
-      <td>Jessica Simpson</td>
-      <td>12</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>My Love Is Your Love</td>
-      <td>Whitney Houston</td>
-      <td>18</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>I Knew I Loved You</td>
-      <td>Savage Garden</td>
-      <td>11</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>6</td>
-      <td>I Need To Know</td>
-      <td>Marc Anthony</td>
-      <td>17</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>Hot Boyz</td>
-      <td>Missy "Misdemeanor" Elliott ft. NAS, EVE &amp; Q-Tip</td>
-      <td>6</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>8</td>
-      <td>U Know What's Up</td>
-      <td>Donell Jones</td>
-      <td>15</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>9</td>
-      <td>Bring It All To Me</td>
-      <td>Blaque</td>
-      <td>11</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>Girl On TV</td>
-      <td>LFO</td>
-      <td>7</td>
-      <td>2000-01-01</td>
-      <td>2000-01-01</td>
-    </tr>
-  </tbody>
-</table>
 </div>
 </div>
-
 </div>
-
 </div>
-
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Collecting-Spotify-Data-Based-On-Billboard-Data">Collecting Spotify Data Based On Billboard Data<a class="anchor-link" href="#Collecting-Spotify-Data-Based-On-Billboard-Data">&#182;</a></h3>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
